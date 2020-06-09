@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Dream</title>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", e => {
+
+
+      const dream = document.getElementById("dream");
+      const submit = document.getElementById("submit");
+
+      submit.addEventListener("onclick", e => {
+
+        if (dream.value == "") {
+          alert("please at least tell me a bit about your dream");
+          e.preventDefault();
+        }
+
+      });
+
+    });
+  </script>
+  <style media="screen">
+    body {
+
+      background-image: url('https://steamuserimages-a.akamaihd.net/ugc/909031767935442036/DAB42DF2EFCF98D42951810FE055D918CBE6A283/');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+
+    }
+
+    #img1 {
+      width: 160px;
+      height: 140px;
+      margin: 20px 30px 50px 0px;
+
+    }
+
+    p1 {
+      font-family: Impact;
+      font-size: 150px;
+      color: #DFE4C8;
+      letter-spacing: 10px;
+    }
+
+    .text1 {
+      font-family: Optima;
+      font-size: 30px;
+      color: #FFFFFF;
+      letter-spacing: -1px;
+      font-weight: bold;
+
+    }
+
+    .form {
+      padding: 30px 20px 20px 97px;
+    }
+
+    .type {
+      outline: none;
+      resize: none;
+      overflow: auto;
+      display: block;
+      background-image: url('https://steamuserimages-a.akamaihd.net/ugc/909031767935442036/DAB42DF2EFCF98D42951810FE055D918CBE6A283/');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-size: 16px;
+      font-family: sans-serif;
+      font-weight: 700;
+      color: #444;
+      width: 100%;
+      max-width: 10%;
+      box-sizing: border-box;
+      border: 1px solid #DFE4C8;
+      box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+      border-radius: .5em;
+
+    }
+
+    .type:hover {
+      border-color: #888;
+    }
+
+    #dream {
+      outline: none;
+      font-weight: 300;
+      resize: none;
+      overflow: auto;
+      color: #444;
+      font-family: Optima;
+      font-size: 30px;
+      border: 2px solid #DFE4C8;
+      background-image: url('https://steamuserimages-a.akamaihd.net/ugc/909031767935442036/DAB42DF2EFCF98D42951810FE055D918CBE6A283/');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    #dream:hover {
+      border-color: #888;
+    }
+
+    #submit {
+      outline: none;
+      font-weight: 800;
+      resize: none;
+      overflow: auto;
+      color: #DFE4C8;
+      font-family: Optima;
+      letter-spacing: -1px;
+      font-size: 60px;
+      border: 3px solid #DFE4C8;
+      background-image: url('https://steamuserimages-a.akamaihd.net/ugc/909031767935442036/DAB42DF2EFCF98D42951810FE055D918CBE6A283/');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      border-radius: 30px;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <center>
+    <!-- <img id="img1" src="pics/dream.png" alt="Dream"> -->
+    <img id="img1" src="pics/dream2.png" />
+    <p1> DREAM </p1>
+
+    <div class="text1">What kind of dream did you experience?</div>
+
+    <div class="form">
+
+      <form class="form1" action="dream.php" method="post">
+        <select class="type" name="type">
+          <option value="sweet">sweet</option>
+          <option value="action">action</option>
+          <option value="scary">scary</option>
+        </select>
+        <br><br>
+        <textarea id="dream" name="dream" rows="5" cols="50" placeholder="Tell me more about your dream.."></textarea>
+        <br><br>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+
+    </div>
+
+  </center>
+
+</body>
+
+</html>
